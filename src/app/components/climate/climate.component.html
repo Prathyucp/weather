@@ -1,9 +1,10 @@
 <h2>Weather Forecast</h2>
 
-<h3 >Today </h3>
 
-<h4>Temperature: {{temperature}} </h4>
-<input type="image" src="{{image}}">
-<h5>{{detailedForecast}}</h5>
-   
+<div *ngFor="let p of climate.properties.periods">
+     <h3 >{{p.name}} </h3>
+<h4>Temperature: {{ p.temperature}} </h4>
+<input type="image" src="{{p.icon}}">
+<h5>{{p.detailedForecast}}</h5>
+</div>
      
